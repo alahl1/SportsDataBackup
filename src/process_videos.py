@@ -1,4 +1,4 @@
-# process_one_video.py
+# process_videos.py
 import json
 import boto3
 import requests
