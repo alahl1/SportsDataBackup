@@ -8,7 +8,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all scripts (including config.py) into the container
-COPY fetch.py process_one_video.py mediaconvert_process.py run_all.py config.py . 
+COPY fetch.py process_videos.py mediaconvert_process.py run_all.py config.py . 
 
 RUN apt-get update && apt-get install -y awscli
 
