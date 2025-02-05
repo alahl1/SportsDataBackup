@@ -41,15 +41,15 @@ cd src
 ## **Step 2: Create and Configure the .env File**
 Search & Replace the following values:
 
-1. <Your-AWS-Account-ID>
+1. Your-AWS-Account-ID
 ```bash
 aws sts get-caller-identity --query "Account" --output text
 ```
-2. <Your-RAPIDAPI-Key>
-3. <Your-AWS-Access-Key>
-4. <Your-AWS-Secret-Access-key>
-5. S3_BUCKET_NAME=<your-alias>
-6. <Your-MediaConvert-Endpoint> 
+2. Your-RAPIDAPI-Key
+3. Your-AWS-Access-Key
+4. Your-AWS-Secret-Access-key
+5. S3_BUCKET_NAME=your-alias
+6. Your-MediaConvert-Endpoint
 ```bash
 aws mediaconvert describe-endpoints
 ```
