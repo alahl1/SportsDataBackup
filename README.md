@@ -159,7 +159,7 @@ aws events put-targets --rule SportsBackupScheduleRule --targets file://ecsTarge
 ```bash
 aws ecs run-task \
   --cluster sports-backup-cluster \
-  --launch-type Fargate \
+  --launch-type FARGATE \
   --task-definition ${TASK_FAMILY} \
   --network-configuration "awsvpcConfiguration={subnets=[\"${SUBNET_ID}\"],securityGroups=[\"${SECURITY_GROUP_ID}\"],assignPublicIp=\"ENABLED\"}" \
   --region ${AWS_REGION}
