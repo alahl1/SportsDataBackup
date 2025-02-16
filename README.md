@@ -67,8 +67,17 @@ bash vpc_setup.sh
 ```
 4. You will see variables in the output, paste these variables into Subnet_ID and Security_Group_ID
 
+## **Step 3: Create DynamoDB Table**
+1. In the CLI, run the following command to create an on demand table
+```bash
+aws dynamodb create-table \
+    --table-name SportsHighlights \
+    --attribute-definitions AttributeName=id,AttributeType=S \
+    --key-schema AttributeName=id,KeyType=HASH \
+    --billing-mode PAY_PER_REQUEST
+```
 
-## **Step 3: Load Environment Variables**
+## **Step 4: Load Environment Variables**
 ```bash
 set -a
 source .env
